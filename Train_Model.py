@@ -32,8 +32,8 @@ model.summary()
 
 # 모델 컴파일 및 학습
 model.compile(optimizer='adam',
-              loss='categorical_crossentropy',
-              metrics=['accuracy'])
+                loss='categorical_crossentropy',
+                metrics=['accuracy'])
 
 model.fit(train_images, train_labels, epochs=10, batch_size=64, validation_split=0.2)
 
