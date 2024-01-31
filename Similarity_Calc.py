@@ -40,6 +40,5 @@ plt.subplot(1, 2, 2)
 plt.imshow(img2[0, :, :, 0])  # 두 번째 이미지 표시
 plt.title('img2')
 
+plt.suptitle(f"Similarity : {similarity[0][0]:.4f}", fontsize=14)
 plt.show()
-
-print(f"유사도 : {similarity[0][0]}")
