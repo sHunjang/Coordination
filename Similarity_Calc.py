@@ -10,7 +10,7 @@ model = tf.keras.models.load_model('Model.h5')
 
 # 이미지 불러오기 및 전처리
 image_path_1 = '/Users/seunghunjang/Desktop/Coordination/TOP_1_B.PNG'
-image_path_2 = '/Users/seunghunjang/Desktop/Coordination/TOP_2_B.PNG'
+image_path_2 = '/Users/seunghunjang/Desktop/Coordination/BOTTOM_5_B.PNG'
 
 img1 = tf.keras.preprocessing.image.load_img(image_path_1, color_mode='grayscale',target_size=(28, 28))
 img1 = tf.keras.preprocessing.image.img_to_array(img1)
@@ -31,7 +31,6 @@ embedding_2 = model.predict(img2)
 # 유사도 계산 (코사인 유사도 사용)
 similarity = cosine_similarity(embedding_1.reshape(1, -1), embedding_2.reshape(1, -1))
 
-"""
 # 이미지 표시
 plt.subplot(1, 2, 1)
 plt.imshow(img1[0, :, :, 0], cmap='gray')  # 첫 번째 이미지 표시
@@ -42,6 +41,5 @@ plt.imshow(img2[0, :, :, 0], cmap='gray')  # 두 번째 이미지 표시
 plt.title('img2')
 
 plt.show()
-"""
 
 print(f"유사도 : {similarity[0][0]}")
