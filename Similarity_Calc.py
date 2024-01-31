@@ -33,11 +33,11 @@ similarity = cosine_similarity(embedding_1.reshape(1, -1), embedding_2.reshape(1
 
 # 이미지 표시
 plt.subplot(1, 2, 1)
-plt.imshow(img1[0, :, :, 0], cmap='gray')  # 첫 번째 이미지 표시
+plt.imshow(img1[0, :, :, 0])  # 첫 번째 이미지 표시
 plt.title('img1')
 
 plt.subplot(1, 2, 2)
-plt.imshow(img2[0, :, :, 0], cmap='gray')  # 두 번째 이미지 표시
+plt.imshow(img2[0, :, :, 0])  # 두 번째 이미지 표시
 plt.title('img2')
 
 plt.show()
