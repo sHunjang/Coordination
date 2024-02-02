@@ -1,3 +1,5 @@
+# Image Similarity Calculations by Cosine Similarity
+
 import tensorflow as tf
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np

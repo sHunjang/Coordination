@@ -1,3 +1,5 @@
+# Image Similarity Calculations by Euclidean Similarity
+
 import tensorflow as tf
 import numpy as np
 import cv2
