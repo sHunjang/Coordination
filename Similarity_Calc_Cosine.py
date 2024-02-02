@@ -44,3 +44,5 @@ plt.title('img2')
 
 plt.suptitle(f"Similarity : {similarity[0][0]:.4f}", fontsize=14)
 plt.show()
+
+print(similarity)

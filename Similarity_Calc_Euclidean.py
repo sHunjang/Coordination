@@ -38,3 +38,5 @@ plt.title('img2')
 
 plt.suptitle(f"Euclidean Distance: {euclidean_distance:.4f}", fontsize=14)
 plt.show()
+
+print(euclidean_distance)
