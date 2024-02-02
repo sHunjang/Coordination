@@ -9,8 +9,8 @@ import matplotlib.pyplot as plt
 model = tf.keras.models.load_model('Model.h5')
 
 # 이미지 불러오기 및 전처리
-image_path_1 = '/Users/seunghunjang/Desktop/Coordination/Back_remove_Imgdir/TOP_3_B.PNG'
-image_path_2 = '/Users/seunghunjang/Desktop/Coordination/Back_remove_Imgdir/TOP_4_B.PNG'
+image_path_1 = 'image1/path'
+image_path_2 = 'image2/path'
 
 img1 = tf.keras.preprocessing.image.load_img(image_path_1, color_mode='grayscale', target_size=(28, 28))
 img1 = tf.keras.preprocessing.image.img_to_array(img1)
