@@ -4,6 +4,6 @@ from PIL import Image
 
 
 # 이미지 배경 제거
-input = Image.open('/Users/seunghunjang/Desktop/Coordination/Coordination/train/BOTTOM/BOTTOM_5.jpg') # load image
+input = Image.open('path/to/img.PNG') # load image
 output = remove(input) # remove background
-output.save('BOTTOM_5_B.PNG') # save image
+output.save('rembg_img_name.PNG') # save image
