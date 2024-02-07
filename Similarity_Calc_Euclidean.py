@@ -9,8 +9,8 @@ import matplotlib.pyplot as plt
 model = tf.keras.models.load_model('Model.h5')
 
 # 이미지 불러오기 및 전처리
-image_path_1 = '/path/to/image.PNG'
-image_path_2 = '/path/to/image.PNG'
+image_path_1 = 'path/to/image.PNG'
+image_path_2 = 'path/to/image.PNG'
 
 img1 = tf.keras.preprocessing.image.load_img(image_path_1, color_mode='grayscale', target_size=(28, 28))
 img1 = tf.keras.preprocessing.image.img_to_array(img1)
@@ -25,7 +25,7 @@ embedding_1 = model.predict(np.expand_dims(img1, axis=0))
 embedding_2 = model.predict(np.expand_dims(img2, axis=0))
 
 # 유클리디안 거리 계산
-euclidean_distance = np.linalg.norm(embedding_1 - embedding_2)
+euclidean_distance = np.linalg.norm(embedding_1.reshape(1, -1) - embedding_2.reshape(1, -1))
 
 # 이미지 표시
 plt.subplot(1, 2, 1)
